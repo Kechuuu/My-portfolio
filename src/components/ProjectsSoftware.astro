@@ -2,20 +2,20 @@
 const PROJECTS = [
   
   {
-    title: "Aplicacion para la configuracion de modulos xbee y Lora",
-    description: "Diseño de una aplicacion para configurar parametros de comunicacion de modulos lora agregando una base de datos en firebase para su registro con un sistema de mac ",
+    title: "Application for Configuring Xbee and LoRa Modules",
+    description: "Design of an application to configure communication parameters of LoRa modules, adding a Firebase database for registration with a MAC system",
     image: "/image/Ebyte_nas.png",
     tags: [".net", "firebase", "c#"],
   },
   {
-    title: "Sistema de control con socket y base de datos",
-    description: "Diseño de interfaz grafica en c# para el control de un sistema de comunicacion con un modulo wifi y base de datos en mysql para el registro de los datos de humedad y temperatura",
+    title: "Control System with Socket and Database",
+    description: "Design of a graphical interface in C# for controlling a communication system with a WiFi module and MySQL database for recording humidity and temperature data",
     image: "/image/UDP.png",
     tags: [".net", "mysql", "c#"],
   },
   {
-    title: "Sistema de acceso RFID",
-    description: "Diseño de sistema de acceso en c# con tarjeta RFID y base de datos en mysql para el registro de los usuarios y sus accesos",
+    title: "RFID Access System",
+    description: "Design of an access system in C# with RFID card and MySQL database for user and access logging",
     image: "/image/Access.png",
     tags: [".net", "mysql", "c#"],
   },
@@ -25,15 +25,15 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image }) => (
     <article>
-      <h3 class = "text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
-      <p class = "text-lg mb-4 text-white">{description}</p>
-      <ul class = "text-white">
+      <h3 class="text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
+      <p class="text-lg mb-4 text-white">{description}</p>
+      <ul class="text-white">
         {tags.map((tag) => (
           <li>{tag}</li>
         ))}
       </ul>
-      <img  class = "rounded"
-      src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+      <img class="rounded"
+      src={image} alt={`Screenshot of the ${title} project`} />
     </article>
   ))
 }

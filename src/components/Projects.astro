@@ -1,27 +1,27 @@
 ---
 const PROJECTSHARDWARE = [
 {
-    title: "Estacion metereologica",
-    description: "Diseño de una estacion metereologica con un microcontrolador RP2040 y sensores de temperatura, humedad y presion atmosferica, con GPS",
+    title: "Weather Station",
+    description: "Design of a weather station with an RP2040 microcontroller and temperature, humidity, and atmospheric pressure sensors, with GPS",
     image: "/image/estacion.png",
     tags: ["Altium Designer", "THONNY"],
   },
   {
-    title: "RP2040 y xbee",
+    title: "RP2040 and Xbee",
     description:
-      "diseño de una pcb en altium designer con un microcontrolador RP2040, un modulo xbee y regulador de voltaje para la comunicacion serial ",
+      "Design of a PCB in Altium Designer with an RP2040 microcontroller, an Xbee module, and a voltage regulator for serial communication",
     image: "/image/raspbery_xbee.png",
     tags: ["Altium Designer", "THONNY"],
   },
   {
-    title: "TFT Y ESP32",
+    title: "TFT and ESP32",
     description: "This is a project",
     image: "/image/ESP32.png",
     tags: ["Altium Designer", "THONNY"],
   },
   {
     title: "RFID",
-    description: "Diseño de una pcb en altium designer con un microcontrolador RP2040, un modulo RFID",
+    description: "Design of a PCB in Altium Designer with an RP2040 microcontroller and an RFID module",
     image: "/image/rfid.png",
     tags: ["Altium Designer", "THONNY"],
   },
@@ -32,16 +32,16 @@ const PROJECTSHARDWARE = [
 {
   PROJECTSHARDWARE.map(({ title, description, tags, image }) => (
     <article>
-      <h3 class = "text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
-      <p class = "text-lg mb-4 text-white">{description}</p>
-      <ul class = "text-white">
+      <h3 class="text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
+      <p class="text-lg mb-4 text-white">{description}</p>
+      <ul class="text-white">
         
         {tags.map((tag) => (
           <li>{tag}</li>
         ))}
       </ul>
-      <img  class = "rounded"
-      src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+      <img class="rounded"
+      src={image} alt={`Screenshot of the ${title} project`} />
     </article>
   ))
 }
