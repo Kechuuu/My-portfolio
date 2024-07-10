@@ -1,0 +1,50 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+const EXPERIENCE =[
+    {
+        date: "Actualmente",
+        title: "Sistema de accesos con Forms.net en C#",
+        description: "Desarrollo de un sistema de accesos con Forms.net en C# para el control de accesos a unas de oficinas con tarjestas RFID usando los puertos seriales.",
+        link: "https://github.com/Kechuuu/rfidBD",
+    },
+    {
+        date: "Noviembre 2023",
+        title: "Sistema de configuración de dispositivos IoT",
+        description: "Configuracion de modulos LoRa por puerto serial con guardado en base de datos con una MAC",
+        link: "https://github.com/Kechuuu/EBYTE-NAS",
+    },
+    {
+        date: "Enero 2023",
+        title: "hardware de un sistema de control de acceso con RFID",
+        description: "Sistema de control de acceso con RFID y base de datos en tiempo real con un microcontrolador RP2040",
+        link: "https://github.com/Kechuuu/Rfid_Firebase_picoW",	
+        
+    },
+    {
+        date: "Noviembre 2022",
+        title: "Estacion Metereologica",
+        description: "Diseño de una estacion metereologica con sensores de humedad, temperatura y presion atmosferica con un microcontrolador Raspberry pi pico y envio de datos a una base de datos en tiempo real.",
+        link: "https://github.com/FranklinZamora/WeatherStationPiPico",
+    }
+
+
+]
+
+
+  
+
+---
+
+
+
+<ol class="relative border-s border-gray-200 ml-3 text-white"> 
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+                
+            </li>))
+     }                 
+   
+</ol>
+

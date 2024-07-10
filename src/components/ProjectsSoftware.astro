@@ -1,0 +1,39 @@
+---
+const PROJECTS = [
+  
+  {
+    title: "Aplicacion para la configuracion de modulos xbee y Lora",
+    description: "Diseño de una aplicacion para configurar parametros de comunicacion de modulos lora agregando una base de datos en firebase para su registro con un sistema de mac ",
+    image: "/image/Ebyte_nas.png",
+    tags: [".net", "firebase", "c#"],
+  },
+  {
+    title: "Sistema de control con socket y base de datos",
+    description: "Diseño de interfaz grafica en c# para el control de un sistema de comunicacion con un modulo wifi y base de datos en mysql para el registro de los datos de humedad y temperatura",
+    image: "/image/UDP.png",
+    tags: [".net", "mysql", "c#"],
+  },
+  {
+    title: "Sistema de acceso RFID",
+    description: "Diseño de sistema de acceso en c# con tarjeta RFID y base de datos en mysql para el registro de los usuarios y sus accesos",
+    image: "/image/Access.png",
+    tags: [".net", "mysql", "c#"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class = "text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
+      <p class = "text-lg mb-4 text-white">{description}</p>
+      <ul class = "text-white">
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img  class = "rounded"
+      src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+    </article>
+  ))
+}

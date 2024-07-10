@@ -1,0 +1,47 @@
+---
+const PROJECTSHARDWARE = [
+{
+    title: "Estacion metereologica",
+    description: "Diseño de una estacion metereologica con un microcontrolador RP2040 y sensores de temperatura, humedad y presion atmosferica, con GPS",
+    image: "/image/estacion.png",
+    tags: ["Altium Designer", "THONNY"],
+  },
+  {
+    title: "RP2040 y xbee",
+    description:
+      "diseño de una pcb en altium designer con un microcontrolador RP2040, un modulo xbee y regulador de voltaje para la comunicacion serial ",
+    image: "/image/raspbery_xbee.png",
+    tags: ["Altium Designer", "THONNY"],
+  },
+  {
+    title: "TFT Y ESP32",
+    description: "This is a project",
+    image: "/image/ESP32.png",
+    tags: ["Altium Designer", "THONNY"],
+  },
+  {
+    title: "RFID",
+    description: "Diseño de una pcb en altium designer con un microcontrolador RP2040, un modulo RFID",
+    image: "/image/rfid.png",
+    tags: ["Altium Designer", "THONNY"],
+  },
+
+];
+---
+
+{
+  PROJECTSHARDWARE.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class = "text-lg font-semibold text-purple-400 mb-2 text-pretty">{title}</h3>
+      <p class = "text-lg mb-4 text-white">{description}</p>
+      <ul class = "text-white">
+        
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img  class = "rounded"
+      src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+    </article>
+  ))
+}
